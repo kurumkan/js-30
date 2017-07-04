@@ -33,14 +33,14 @@ img.bg {
   border: 2px solid #000; 
   width: 60px;
   height: 60px;
-  font-size: 18px;
-  margin: 3px;
+  font-size: 18px;  
   transition: all .2s;
+  margin: 3px;
 }
 
 #buttons-wrapper button span {
   color: yellow;
-  font-size: 12px;
+  font-size: 8px;
   display: block;
   padding-top: 2px;
 }
