@@ -29,7 +29,8 @@ for(let i = 0; i < buttonElements.length; i++) {
 }
 
 window.addEventListener('keydown', function(e) {
-  switch(e.key) {
+  const key = e.key.toLowerCase();
+  switch(key) {
     case 'a':      
     case 's':      
     case 'd':      
@@ -40,7 +41,7 @@ window.addEventListener('keydown', function(e) {
     case 'k':      
     case 'l':
       e.preventDefault();
-      const index = buttonsArray.indexOf(e.key);      
+      const index = buttonsArray.indexOf(key);      
       if(index >= 0){
         triggerMouseEvent (buttonElements[index], 'mousedown');
       }            
