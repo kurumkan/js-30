@@ -14,16 +14,21 @@ const soundsArray = soundLinks.map(s => new Audio(s));
 const buttonElements = document.getElementsByTagName('button');
 
 for(let i = 0; i < buttonElements.length; i++) {
-  buttonElements[i].addEventListener("mousedown", function(){    
-    buttonElements[i].className = 'active';
+  buttonElements[i].addEventListener('mousedown', function(){    
+    buttonElements[i].classList.add('active');
+    soundsArray[i].currentTime = 0;
     soundsArray[i].play();
   });   
-  buttonElements[i].addEventListener("mouseup", function(){
-    buttonElements[i].className = '';
+  buttonElements[i].addEventListener('mouseup', function(){
+    buttonElements[i].classList.remove('active');
+  });   
+  buttonElements[i].addEventListener('transitionend', function(e){
+    if(e.propertyName !== 'transform') return;    
+    triggerMouseEvent (buttonElements[i], 'mouseup');
   });   
 }
-   
-document.addEventListener('keydown', function(e) {
+
+window.addEventListener('keydown', function(e) {
   switch(e.key) {
     case 'a':      
     case 's':      
@@ -38,9 +43,6 @@ document.addEventListener('keydown', function(e) {
       const index = buttonsArray.indexOf(e.key);      
       if(index >= 0){
         triggerMouseEvent (buttonElements[index], 'mousedown');
-        setTimeout(function() {
-          triggerMouseEvent (buttonElements[index], 'mouseup');
-        }, 100);
       }            
   }
 });
