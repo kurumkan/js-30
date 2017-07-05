@@ -29,7 +29,7 @@ for(let i = 0; i < buttonElements.length; i++) {
 }
 
 window.addEventListener('keydown', function(e) {
-  const key = e.key.toLowerCase();
+  const key = String.fromCharCode(e.keyCode).toLowerCase();
   switch(key) {
     case 'a':      
     case 's':      
