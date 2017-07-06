@@ -1,0 +1,39 @@
+body {
+  background: steelblue;
+}
+
+#wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#clock {
+  border: 8px solid #fff;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+}
+
+.arrow {
+  height: 2px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 0;
+}
+
+#hour-arrow {
+  width: 85px;
+}
+
+#minute-arrow {
+  width: 100px;
+}
+
+#second-arrow {
+  width: 115px;
+}
