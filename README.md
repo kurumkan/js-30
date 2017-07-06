@@ -5,6 +5,7 @@
 
 Demos:
 1. <a href="https://codepen.io/pbweb/full/jwKqjp/">Drum Kit</a>
+2. <a href="https://codepen.io/pbweb/full/BZPmNZ/">css/js clock</a>
 
 
 
