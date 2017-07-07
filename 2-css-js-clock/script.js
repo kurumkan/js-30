@@ -6,10 +6,10 @@ updateClock();
 setInterval(updateClock, 1000);
 
 function updateClock() {
-  const today = new Date(),
-        h = today.getHours(),
-        m = today.getMinutes(),
-        s = today.getSeconds();
+  const now = new Date(),
+        h = now.getHours(),
+        m = now.getMinutes(),
+        s = now.getSeconds();
 
   const hAngle = 270 + (h % 12) * 30 + (m % 60 / 60) * 30;
         mAngle = 270 + (m % 60) * 6 + (s % 60 / 60) * 6;

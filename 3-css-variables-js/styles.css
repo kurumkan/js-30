@@ -1,0 +1,37 @@
+html{
+  --base-color: #18BC9C;
+  --spacing: 0px;
+  --blur: 0;
+}
+body {
+  background: #2C3E50;
+  color: #fff;
+}
+#wrapper {
+  text-align: center;
+}
+.highlighted {
+  color: var(--base-color);
+}
+#img-wrapper {
+  background: var(--base-color);
+  padding: 40px;
+  display: inline-block;
+  padding-top: calc(var(--spacing) + 40px);
+  padding-left: calc(var(--spacing) + 40px);
+}
+#img-wrapper img{
+  max-width: 100%;
+  height: auto;
+  filter: blur(var(--blur));
+}
+#controls {
+  font-size: 18px;
+  display: inline-block;
+}
+#controls div{
+  display: table-row;
+}
+#controls label, input {
+  display: table-cell;
+}
